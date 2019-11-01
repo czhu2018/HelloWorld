@@ -5,7 +5,7 @@ pipeline {
         stage('get source') {
             steps {
             echo 'Hello Hello'
-			archiveArtifacts '<fileset dir="${C:/Jenkins/jobs/example-pipeline}" casesensitive="yes">   <include name="**/*.*"/>  </fileset>'
+			git 'https://github.com/czhu2018/HelloWorld'
 			}
 		}
 		stage('Build') {
